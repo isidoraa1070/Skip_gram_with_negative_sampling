@@ -141,10 +141,8 @@ king - man + woman = ?
 A p-value of ~0.0000 indicates that the correlation
 is statistically significant.
 
----
 
-
-## t-SNE Visualization of Word Embeddings
+### t-SNE Visualization of Word Embeddings
 
 The t-SNE plot shows a 2D projection of the learned 
 word embeddings. Semantically related words naturally cluster 
@@ -164,7 +162,7 @@ in the training data, without any explicit semantic supervision.
 ![t-SNE Word Embeddings](visualizations/tsne.png)
 
 
-## Word Similarity Heatmap
+### Word Similarity Heatmap
 
 The heatmap displays cosine similarity scores between 
 a selected set of words. Brighter red indicates higher 
@@ -195,7 +193,7 @@ semantic supervision.
 ![Word Similarity Heatmap](visualizations/similarity_heatmap.png)
 
 
-## WordSim-353 Evaluation
+### WordSim-353 Evaluation
 
 The scatter plot shows the correlation between human 
 similarity judgements (x-axis) and model's cosine 

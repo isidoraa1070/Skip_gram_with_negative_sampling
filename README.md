@@ -50,6 +50,47 @@ as proposed in the original paper.
 
 ---
 
+## Data & Pretrained Embeddings
+
+The model was trained on approximately 2 million tokens from the text8 dataset.
+Training takes around 226 minutes on CPU — to skip training, 
+pretrained embeddings and other large files are available on Google Drive:
+
+| File | Description | Link |
+|------|-------------|------|
+| cache.pkl | Cached preprocessed dataset | [Download](https://drive.google.com/file/d/11hLmWJeXHG3zeCz-VZMtpU-aqMm3ABfd/view?usp=drive_link) |
+| embeddings.pkl | Pretrained word embeddings | [Download](https://drive.google.com/file/d/1S2SJrVn8V2C4cHESRm8X4jOTjcwi-ALw/view?usp=drive_link) |
+| text8 | Training dataset | [Download](https://drive.google.com/file/d/1C7gPS4mYXCNnKK3CpeM9-v00fgQ5pkJ-/view?usp=drive_link) |
+
+Place all downloaded files in the `data/` folder before running any scripts.
+
+## Setup & Usage
+
+### Requirements
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### Run Training (optional, it takes ~226 minutes)
+
+```bash
+python train.py
+
+```
+
+### Run Evaluation
+```bash
+python evaluate.py
+
+```
+
+### Run Visualizations
+```bash
+python visualizations.py
+
+```
 
 ## Evaluation Results
 
@@ -101,8 +142,6 @@ is statistically significant.
 
 ## t-SNE Visualization of Word Embeddings
 
-![t-SNE Word Embeddings](visualizations/tsne1.png)
-
 The t-SNE plot below shows a 2D projection of the learned 
 word embeddings. Semantically related words naturally cluster 
 together, demonstrating that the model has captured meaningful 
@@ -118,9 +157,9 @@ relationships between words:
 This clustering emerges purely from co-occurrence patterns 
 in the training data, without any explicit semantic supervision.
 
-## Word Similarity Heatmap
+![t-SNE Word Embeddings](visualizations/tsne1.png)
 
-![Word Similarity Heatmap](visualizations/similarity_heatmap1.png)
+## Word Similarity Heatmap
 
 The heatmap displays cosine similarity scores between 
 a selected set of words. Brighter red indicates higher 
@@ -148,9 +187,10 @@ These patterns emerge purely from co-occurrence
 statistics in the training data, without any explicit 
 semantic supervision.
 
-## WordSim-353 Evaluation
+![Word Similarity Heatmap](visualizations/similarity_heatmap1.png)
 
-![WordSim-353 Evaluation](visualizations/wordsim_scatter1.png)
+
+## WordSim-353 Evaluation
 
 The scatter plot shows the correlation between human 
 similarity judgements (x-axis) and model's cosine 
@@ -160,6 +200,8 @@ Each point represents a word pair. A perfect model would
 show a clear diagonal trend — pairs that humans rate as 
 highly similar would also receive high cosine similarity 
 scores from the model.
+
+![WordSim-353 Evaluation](visualizations/wordsim_scatter1.png)
 
 **Spearman correlation: 0.5513**
 

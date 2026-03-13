@@ -44,9 +44,13 @@ as proposed in the original paper.
 
 ### Optimization
 - Vectorized forward and backward pass over full batches
-- `np.add.at` used for correct gradient accumulation 
-  when duplicate indices appear in a batch
 - Linear learning rate decay throughout training
+- All training pairs are generated upfront and shuffled 
+  at the beginning of each epoch to ensure random ordering
+- Subsampling of frequent words reduces dataset size 
+  and speeds up training while improving embedding quality
+- Vocabulary filtered by minimum frequency (min_count=5)
+  to reduce matrix size and focus on meaningful words
 
 ---
 

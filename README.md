@@ -157,7 +157,7 @@ relationships between words:
 This clustering emerges purely from co-occurrence patterns 
 in the training data, without any explicit semantic supervision.
 
-![t-SNE Word Embeddings](visualizations/tsne1.png)
+![t-SNE Word Embeddings](visualizations/tsne.png)
 
 ## Word Similarity Heatmap
 
@@ -187,7 +187,7 @@ These patterns emerge purely from co-occurrence
 statistics in the training data, without any explicit 
 semantic supervision.
 
-![Word Similarity Heatmap](visualizations/similarity_heatmap1.png)
+![Word Similarity Heatmap](visualizations/similarity_heatmap.png)
 
 
 ## WordSim-353 Evaluation
@@ -201,7 +201,7 @@ show a clear diagonal trend — pairs that humans rate as
 highly similar would also receive high cosine similarity 
 scores from the model.
 
-![WordSim-353 Evaluation](visualizations/wordsim_scatter1.png)
+![WordSim-353 Evaluation](visualizations/wordsim_scatter.png)
 
 **Spearman correlation: 0.5513**
 

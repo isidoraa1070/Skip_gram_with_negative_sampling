@@ -64,6 +64,8 @@ pretrained embeddings and other large files are available on Google Drive:
 
 Place all downloaded files in the `data/` folder before running any scripts.
 
+---
+
 ## Setup & Usage
 
 ### Requirements
@@ -91,6 +93,7 @@ python evaluate.py
 python visualizations.py
 
 ```
+---
 
 ## Evaluation Results
 
@@ -105,7 +108,7 @@ most_similar("music")     → folk, musical, pop, jazz
 most_similar("communist") → communism, communists, socialist, stalinist
 most_similar("evolution") → evolutionary, creationists, biogeography, genetics
 most_similar("terrorism") → killings, osama, laden, qaeda
-most_similar("france") → nantes, paris, spain, clermont
+most_similar("france")    → nantes, paris, spain, clermont
 
 ```
 
@@ -114,7 +117,7 @@ Analogy queries of the form: word_a - word_b + word_c = ?
 ```
 
 paris - france + germany = ?
-→ berlin  (0.6745), munich (0.6263)
+→ berlin (0.6745), munich (0.6263)
 
 
 king - man + woman = ?
@@ -131,18 +134,19 @@ king - man + woman = ?
 
 | Metric | Score |
 |--------|-------|
-| Spearman Correlation | 0.5585 |
+| Spearman Correlation | 0.5513 |
 | p-value | ~0.0000 |
 | Coverage | 324/353 pairs |
 
 A p-value of ~0.0000 indicates that the correlation
 is statistically significant.
 
+---
 
 
 ## t-SNE Visualization of Word Embeddings
 
-The t-SNE plot below shows a 2D projection of the learned 
+The t-SNE plot shows a 2D projection of the learned 
 word embeddings. Semantically related words naturally cluster 
 together, demonstrating that the model has captured meaningful 
 relationships between words:
@@ -158,6 +162,7 @@ This clustering emerges purely from co-occurrence patterns
 in the training data, without any explicit semantic supervision.
 
 ![t-SNE Word Embeddings](visualizations/tsne.png)
+
 
 ## Word Similarity Heatmap
 

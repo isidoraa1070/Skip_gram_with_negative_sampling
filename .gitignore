@@ -1,0 +1,11 @@
+# Large data files
+data/text8
+data/cache.pkl
+data/embeddings.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+
+

@@ -79,8 +79,8 @@ def plot_similarity_heatmap(W_in, word_to_idx, words):
 def plot_wordsim_scatter(human_scores, model_scores, correlation):
     """
     Shows:
-    → how well the model agrees with human similarity judgments
-    → highlights potential outliers where the model disagrees
+      how well the model agrees with human similarity judgments
+      highlights potential outliers where the model disagrees
     """
     plt.figure(figsize=(8, 6))
     plt.scatter(human_scores, model_scores, alpha=0.5)
